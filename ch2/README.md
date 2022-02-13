@@ -13,12 +13,18 @@ $ python manage.py runserver
 $ python manage.py migrate
 ```
 
-### create admin user
+### Create admin user
 ```bash
 $ python manage.py createsuperuser
 ```
 
-### create app
+### Create app
 ```bash
 $ python manage.py startapp blog
+```
+
+### Apply database model
+```bash
+$ python manage.py makemigrations
+$ python manage.py migrate
 ```
