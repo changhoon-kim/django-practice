@@ -17,3 +17,8 @@ $ python manage.py migrate
 ```bash
 $ python manage.py createsuperuser
 ```
+
+### create app
+```bash
+$ python manage.py startapp blog
+```
