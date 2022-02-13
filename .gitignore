@@ -1,2 +1,5 @@
 .DS_Store
 *.zip
+venv/*
+db.sqlite3
+*.pyc
