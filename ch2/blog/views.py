@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Post
 
 class PostList(ListView):
@@ -8,8 +7,14 @@ class PostList(ListView):
     # NOTE: template_name 을 직접 지정
     # template_name = 'blog/index.html'
 
+class PostDetail(DetailView):
+    model = Post
+
 '''
 FBV 방식
+
+from django.shortcuts import render
+
 def index(request):
     posts = Post.objects.all().order_by('-pk')
 
@@ -20,7 +25,6 @@ def index(request):
             'posts': posts,
         }
     )
-'''
 
 def single_post_page(request, pk):
     post = Post.objects.get(pk=pk)
@@ -32,3 +36,4 @@ def single_post_page(request, pk):
             'post': post,
         }
     )
+'''
