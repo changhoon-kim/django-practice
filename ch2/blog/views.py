@@ -1,6 +1,7 @@
 from django.views.generic import ListView, DetailView
 from .models import Post
 
+# NOTE: blog/templates/blog/post_list.html 찾음
 class PostList(ListView):
     model = Post
     ordering = '-pk'
