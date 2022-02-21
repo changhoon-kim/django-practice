@@ -1,5 +1,6 @@
-from django.views.generic import ListView, DetailView
-from django.shortcuts import render
+from django.views.generic import ListView, DetailView, CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render, redirect
 from .models import Post, Category, Tag
 
 # NOTE: blog/templates/blog/post_list.html 찾음
@@ -24,6 +25,18 @@ class PostDetail(DetailView):
         context['categories'] = Category.objects.all()
         context['no_category_post_count'] = Post.objects.filter(category=None).count()
         return context
+
+class PostCreate(LoginRequiredMixin, CreateView):
+    model = Post
+    fields = ['title', 'hook_text', 'content', 'head_image', 'file_upload', 'category']
+
+    def form_valid(self, form):
+        create_user = self.request.user
+        if create_user.is_authenticated:
+            form.instance.author = create_user
+            return super(PostCreate, self).form_valid(form)
+        else:
+            return redirect('/blog/')
 
 def category_page(request, slug):
     if slug == 'no_category':
