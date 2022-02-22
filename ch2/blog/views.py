@@ -1,5 +1,5 @@
 from django.views.generic import ListView, DetailView, CreateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render, redirect
 from .models import Post, Category, Tag
 
@@ -26,13 +26,16 @@ class PostDetail(DetailView):
         context['no_category_post_count'] = Post.objects.filter(category=None).count()
         return context
 
-class PostCreate(LoginRequiredMixin, CreateView):
+class PostCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Post
     fields = ['title', 'hook_text', 'content', 'head_image', 'file_upload', 'category']
 
+    def test_func(self):
+        return self.request.user.is_superuser or self.request.user.is_staff
+
     def form_valid(self, form):
         create_user = self.request.user
-        if create_user.is_authenticated:
+        if create_user.is_authenticated and (create_user.is_staff or create_user.is_superuser):
             form.instance.author = create_user
             return super(PostCreate, self).form_valid(form)
         else:
