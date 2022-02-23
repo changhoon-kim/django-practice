@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.shortcuts import render, redirect
 from .models import Post, Category, Tag
 from django.core.exceptions import PermissionDenied
+from django.utils.text import slugify
 
 # NOTE: blog/templates/blog/post_list.html 찾음
 class PostList(ListView):
@@ -38,7 +39,25 @@ class PostCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         create_user = self.request.user
         if create_user.is_authenticated and (create_user.is_staff or create_user.is_superuser):
             form.instance.author = create_user
-            return super(PostCreate, self).form_valid(form)
+            response = super(PostCreate, self).form_valid(form)
+
+            tags_str = self.request.POST.get('tags_str')
+            if tags_str:
+                tags_str = tags_str.strip()
+                tags_str = tags_str.replace(',', ';')
+                tags_list = tags_str.split(';')
+
+                for t in tags_list:
+                    t = t.strip()
+                    tag, is_tag_created = Tag.objects.get_or_create(name=t)
+                    if is_tag_created:
+                        tag.slug = slugify(t, allow_unicode=True)
+                        tag.save()
+                    # NOTE: self.object -> 새로 생성된 post
+                    self.object.tags.add(tag)
+
+            return response
+
         else:
             return redirect('/blog/')
 
@@ -49,7 +68,7 @@ class PostUpdate(LoginRequiredMixin, UpdateView):
     template_name = 'blog/post_update_form.html'
 
     def dispatch(self, request, *args, **kwargs):
-        # NOTE: self.get_object() 는 UpdateView 의 method 로 Post.ojbects.get(pk=pk) 와 동일
+        # NOTE: self.get_object() 는 UpdateView 의 method 로 Post.objects.get(pk=pk) 와 동일
         if request.user.is_authenticated and request.user == self.get_object().author:
             return super(PostUpdate, self).dispatch(request, *args, **kwargs)
         else:
