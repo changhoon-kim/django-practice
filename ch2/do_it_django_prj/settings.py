@@ -39,9 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions', # django-extensions
+    
+    'crispy_forms', # django-crispy-forms
+    'markdownx', # django-markdownx; django v4 에서는 제대로 동작 안함
+
     'blog',
     'single_pages',
-    'crispy_forms', # django-crispy-forms
 ]
 
 MIDDLEWARE = [
