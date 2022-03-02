@@ -10,6 +10,7 @@ from django.utils.text import slugify
 class PostList(ListView):
     model = Post
     ordering = '-pk'
+    paginate_by = 5
     # NOTE: template_name 을 직접 지정
     # template_name = 'blog/index.html'
 
