@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from markdownx.models import MarkdownxField
 from markdownx.utils import markdown    
+from datetime import timedelta
 import os
 
 class Tag(models.Model):
@@ -71,3 +72,10 @@ class Comment(models.Model):
     def get_absolute_url(self):
         # NOTE: # 은 HTML 태그의 id 를 의미
         return f'{self.post.get_absolute_url()}#comment-{self.pk}'
+
+    def is_same_created_at_and_modified_at(self):
+        diff = self.modified_at - self.created_at
+        if diff.total_seconds() < 0.0001:
+            return True
+
+        return False
