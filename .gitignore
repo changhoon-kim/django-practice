@@ -5,3 +5,5 @@ db.sqlite3
 *.pyc
 migrations/
 _media/
+.env.prod
+.env.prod.db
