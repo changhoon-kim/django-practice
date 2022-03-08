@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'crispy_forms', # django-crispy-forms
     'markdownx', # django-markdownx; django v4 에서는 제대로 동작 안함
 
+    'rest_framework',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -82,6 +84,14 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+}
 
 WSGI_APPLICATION = 'do_it_django_prj.wsgi.application'
 
