@@ -1,1 +1,1 @@
-worker: python ch2/manage.py runserver
+web: gunicorn do_it_django_prj.wsgi --log-file -
