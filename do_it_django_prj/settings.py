@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-import os
+import os, dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -110,6 +110,11 @@ DATABASES = {
         'PORT': os.environ.get("SQL_PORT", '5432'),
     }
 }
+
+db_from_env = dj_database_url.config(
+    default='postgres://eqxuibljphvguj:66547ffd5bedeedd6422a9bc4743288b1a0e4ea17a1a85ddcf20409e4c61274f@ec2-52-70-186-184.compute-1.amazonaws.com:5432/d4d086ge601rpi',
+    conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
