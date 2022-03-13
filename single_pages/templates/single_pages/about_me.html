@@ -25,14 +25,45 @@
                 </p>
 
                 <ul>
+                    <li>SKILL SET</li>
+                    <ul>
+                        <li>Languges: C++, Python, Golang</li>
+                        <li>Frameworks: Carbon, Flask, Django</li>
+                        <ul>
+                            <li> Carbon: 자체개발 framework</li>
+                        </ul>
+                        <li>Communication: Github</li>
+                        <li>Storage: Mysql, ElasticSearch, nbase-t</li>
+                        <ul>
+                            <li>nbase-t: mysql 기반 클러스터링)</li>
+                        </ul>
+                        <li>Cache: nbase-arc(Redis), arcus(memcached)</li>
+                        <li>Messaging: Kafka, rabbitmq</li>
+                        <li>Visualize: Grafana, kibana</li>
+                        <li>Deploying: nDeloy</li>
+                        <li>Testing: pytest</li>
+                        <li>Monitoring: Server check by jenkins</li>
+                        <li>Proxy: nginx</li>
+                        <li>OS: NAVER Cloud VM - CentOS</li>
+                    </ul>
                     <li>WORK EXPERIENCE</li>
                     <ul>
-                        <li>웍스모바일(네이버웍스) - 메시지 서버 (2016.02 ~ 현재)</li>
+                        <li>웍스모바일/네이버웍스 - 메시지 서버 (2016.02 ~ 현재)</li>
                         <li>네이버 - 부트캠프 (2015.12 ~ 2016.01)</li>
+                        <li>인밸류비즈(인턴) - 육군사관학교 학사종합서비스 (2014.08 ~ 2014.12)</li>
                     </ul>                      
                     <li>EDUCATION</li>
                     <ul>
                         <li>한국기술교육대학교 컴퓨터공학 (2009.03 ~ 2016.02)</li>
+                    </ul>
+                    <li>AWARDS</li>
+                    <ul>
+                        <li>2014 한국기술교육대학교 프로그래밍 경진 (알고리즘) 대회 금상</li>
+                    </ul>
+                    <li>Link</li>
+                    <ul>
+                        <li><a class="nav-link" href="https://linkedin.com/in/changhoon-kim-641241104">LinkedIn</a></li>
+                        <li><a class="nav-link" href="https://github.com/changhoon-kim">Github</a></li>
                     </ul>
                 </ul>
             </div>
@@ -43,6 +74,8 @@
     </div>
 </section>
 
+<!-- TODO: image height fix? -->
+<!-- TODO: mouse over? -->
 <section class="bg-light margin-for-footer">
     <div class="container">
         <div class="row">
@@ -55,7 +88,7 @@
                 <div class="card" data-toggle="modal" data-target="#message_server">
                     <img class="card-img-top" src="{% static 'single_pages/images/NW.png' %}">
                     <div class="card-body">
-                        <h5 class="card-title">메시지 서버 개발 [2016 ~ 2022] </h5>
+                        <h5 class="card-title">메시지 API 서버 개발 [2016.02 ~ 2022.03] </h5>
                         <p>C++ Framework (자체개발) 를 통해 메시지 API 서버 개발</p>
                     </div>
                 </div>
@@ -65,8 +98,32 @@
                 <div class="card" data-toggle="modal" data-target="#gateway_server">
                     <img class="card-img-top" src="{% static 'single_pages/images/with_line.png' %}">
                     <div class="card-body">
-                        <h5 class="card-title">LINE 메시지 연동 GW 서버 개발 [2016 ~ 2022] </h5>
-                        <p>c++ Framework (자체개발) 를 통해 NW/LW 와 LINE 간 메시지 연동을 위한 GW 서버 개발</p>
+                        <h5 class="card-title">LINE 메시지 연동 GW 서버 개발 [2016.02 ~ 2022.03] </h5>
+                        <p>C++ Framework (자체개발) 를 통해 NW/LW 와 LINE 간 메시지 연동을 위한 GW 서버 개발</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#statistic">
+                    <img class="card-img-top" src="{% static 'single_pages/images/statistic.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">통계용 데몬 및 데이터 시각화 시스템 [2018.11 ~ 2019.06]</h5>
+                        <p>Golang kafka consume + ElasticSearch 을 사용하여 시각화 시스템 구축</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#intern_mentoring">
+                    <img class="card-img-top" src="{% static 'single_pages/images/mentoring.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">인턴 멘토링 [2018.07 ~ 2019.02]</h5>
+                        <p>인턴분들과 서브 프로젝트 진행하며 방향성 가이드</p>
                     </div>
                 </div>
             </div>
@@ -75,8 +132,18 @@
                 <div class="card" data-toggle="modal" data-target="#bot_platform">
                     <img class="card-img-top" src="{% static 'single_pages/images/bot_platform.png' %}">
                     <div class="card-body">
-                        <h5 class="card-title">봇 플랫폼 개발 [2016]</h5>
-                        <p>Golang 을 사용하여 봇플랫폼 개발 참여</p>
+                        <h5 class="card-title">봇 플랫폼 개발 [2016.10 ~ 2018.12]</h5>
+                        <p>Golang 을 사용한 봇플랫폼 개발 참여</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#global_uuid">
+                    <img class="card-img-top" src="{% static 'single_pages/images/uuid.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">GlobalUuid 설계 및 개발 [2017.01 ~ 2018.08]</h5>
+                        <p>C++ Framework (자체개발) 통해 Global unique id 발급을 위한 데몬 구축</p>
                     </div>
                 </div>
             </div>
@@ -89,19 +156,45 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="MessageServerModalLabel">메시지 서버 개발/운영</h5>
+                <h5 class="modal-title" id="MessageServerModalLabel">메시지 API 서버 개발/운영</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-lg-7">
-                        <img class="img-fluid" src="{% static 'single_pages/images/NW.png' %}">
-                    </div>
-                    <div class="col-lg-5">
-                        <p>C++ Framework (자체개발) 를 통해 메시지 API 서버 개발</p>
-                    </div>
+                    <ul>
+                        <li>이미지 묶어 보내기 설계 및 개발 (2022.01 ~ 2022.03)</li>
+                        <ul>
+                            <li>여러 이미지 전송 시 묶어서 보이도록 기능 설계 및 개발</li>
+                        </ul>
+                        <li>멀티인스턴스 연동 개발 (2020.09 ~ 2020.11)</li>
+                        <ul>
+                            <li>idc 별 연동 구현, 다른 idc 로 이벤트 전달 시 kafka pub/sub 구조</li>
+                        </ul>
+                        <li>사용자 캐시 개선 (2019.11 ~ 2020.02)</li>
+                        <ul>
+                            <li>from/to 구조로 되어 히트율이 낮은 캐시 구조 개선</li>
+                            <li>http 호출량 63% 수준으로 개선, action 수행 평균 수행속도 80% 수준으로 개선</li>
+                        </ul>
+                        <li>channel type 구조 확장 개선 (2019.07 ~ 2019.09)</li>
+                        <ul>
+                            <li>각 유형에 따라 type 을 부여하고 특정 값 보다 커질 경우 나간 대화방으로 처리해 더 이상 확장 할 수 없는 구조를 개선</li>
+                        </ul>
+                        <li>성능 개선 - badge 계산 slow query, rabbitmq pub connection (2019.01 ~ 2019.02)</li>
+                        <ul>
+                            <li>max badge 적용 - peak 시간 기준 80% 수준으로 감소</li>
+                            <li>rabbitmq pub connect 시간 개선을 위한 커넥션 풀 추가</li>
+                        </ul>
+                        <li>캐시풀 사용 성능 개선 (2018.09 ~ 2018.10)</li>
+                        <ul>
+                            <li>life cycle 개선으로 캐시풀 개선</li>
+                        </ul>
+                        <li>MQTT 클러스터링 (2016.03 ~ 2016.05)</li>
+                        <ul>
+                            <li>알람 부하를 관리하기 위한 사용자별, 테넌트 별 특정 클러스터 사용</li>
+                        </ul>
+                    </ul>
                 </div>
             </div>
             <div class="modal-footer">
@@ -122,12 +215,41 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-lg-7">
-                        <img class="img-fluid" src="{% static 'single_pages/images/with_line.png' %}">
-                    </div>
-                    <div class="col-lg-5">
-                        <p>c++ Framework (자체개발) 를 통해 NW/LW 와 LINE 간 메시지 연동을 위한 GW 서버 개발</p>
-                    </div>
+                    <ul>
+                        <li>LINE-LW 이모지 호환 지원 (2022.01)</li>
+                        <ul>
+                            <li>각 플랫폼 별로 다른 이모지 포맷을 호환되도록 parser 개발</li>
+                        </ul>
+                        <li>LINE 사용자 profile 동기화 개선 (2021.09 ~ 2021.10)</li>
+                        <ul>
+                            <li>배치 서버에서 풀스캔 동기화에서 서비스 내이서 카프카를 통한 동기화로 개선</li>
+                        </ul>
+                        <li>Ratelimit 추가 및 모니터링 강화 (2021.06 ~ 2021.07)</li>
+                        <ul>
+                            <li>File 전송 어뷰징에 따른 ratelimit 추가 및 slow queue 적용 및 모니터링 항목 개선</li>
+                        </ul>
+                        <li>MessageAPI Server 분산 DB 적용 지원 (2021.03 ~ 2021.06)</li>
+                        <ul>
+                            <li>테넌트 별 데이터 복사를 위한 GW 에서의 API 추가 설계 및 개발</li>
+                        </ul>
+                        <li>GW queue 전환 rabbitmq -> kafka (2020.12 ~ 2021.03)</li>
+                        <ul>
+                            <li>메시지 큐 운영의 안전성과 속도를 위한 큐 전환</li>
+                            <li>대형방 멤버처리 시 속도 개선 (경과시간 60% 수준으로 감소)</li>
+                            <li>produce 속도 개선 (경과시간 50% 수준으로 개선)</li>
+                        </ul>
+                        <li>GW test 환경 구축 및 테스트 코드 추가 (2019.02 ~ 2019.03)</li>
+                        <ul>
+                            <li>라인웍스, 라인의 gw 서버 테스트 환경 구축</li>
+                            <li>coverage 0% -> 70%</li>
+                        </ul>
+                        <li>트러블 슈팅(데몬 memory leak 해결) (2018.10 ~ 2018.11)</li>
+                        <ul>
+                            <li>valgrind 로 메모리 분석 및 curl 특정 버전에서의 memory leak 발견</li>
+                        </ul>
+                        <li>라인 메신저 연동 - N:N 대화방 (2018.09 ~ 2018.10)</li>
+                        <li>라인 메신저 연동 - 일부 기능 (2017.12 ~ 2018.02)</li>
+                    </ul>
                 </div>
             </div>
             <div class="modal-footer">
@@ -137,6 +259,67 @@
     </div>
 </div>
 
+<div class="modal fade" id="statistic" tabindex="-1" role="dialog" aria-labelledby="statisticModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="statisticModalLabel">통계용 데몬 및 데이터 시각화 시스템 구축</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <ul>
+                        <li>메시지 데이터를 통계화 하기 위한 데몬과 시각화 시스템 설계(2018.11 ~ 2018.12)</li>
+                        <li>통계 시스템 개발(2019.04 ~ 2019.06)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="intern_mentoring" tabindex="-1" role="dialog" aria-labelledby="internMentoringModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="internMentoringModalLabel">인턴 멘토링</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                      <ul>
+                          <li>API swagger yaml converter (2020.07 ~ 2020.08)</li>
+                          <ul>
+                              <li>내부 모델 파일을 파싱 후 yaml 로 생성하여 swagger 적용 가능하도록 하는 converter</li>
+                          </ul>
+                          <li>Flex message 지원을 위한 mini chat server 구축 (2019.01 ~ 2019.02)</li>
+                          <ul>
+                              <li>python, django, nginx, mosquitto, swagger, pstgreSQL</li>
+                          </ul>
+                          <li>출퇴근 봇 (2018.07 ~ 2018.08)</li>
+                          <ul>
+                              <li>LineWorks bot platform 을 이용한 출퇴근 체크 봇 (python, tensor flow, djangom mysql)</li>
+                          </ul>
+                          <li>비콘, Android, Chat, Bot 연동 활용 (2018.04 ~ 2018.05)</li>
+                          <ul>
+                              <li>비콘을 활용해 App 에서 bot 과 통신하고 bot 에서는 출퇴근, 장소 소개 등을 chat server 를 통해 제공</li>
+                          </ul>
+                      </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="modal fade" id="bot_platform" tabindex="-1" role="dialog" aria-labelledby="botPlatformModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -149,15 +332,50 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-lg-7">
-                        <img class="img-fluid" src="{% static 'single_pages/images/bot_platform.png' %}">
-                    </div>
-                    <div class="col-lg-5">
-                        <p>Golang 을 사용하여 봇플랫폼 개발 참여</p>
-                        <!--
-                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 인프런</button>
-                        -->
-                    </div>
+                    <ul>
+                        <li>Bot platform 개발 (2018.10 ~ 2018.12)</li>
+                        <ul>
+                            <li>콜백 기능 및 신규 API 추가</li>
+                        </ul>
+                        <li>Bot prototype 설계 및 개발 (2017.04 ~ 2017.07)</li>
+                        <ul>
+                            <li>식당 봇, 주사위 봇, 결재 봇 구축 (python, flask, django, mysql, redis)</li>
+                        </ul>
+                        <li>Bot plaform 개발 (2017.03 ~ 2017.06)</li>
+                        <ul>
+                            <li>초기 API 구현 (golang, mysql)</li>
+                        </ul>
+                        <li>Bot TF (2016.10 ~ 2016.12)</li>
+                        <ul>
+                            <li>MS bot framework, facebook, line, telegram, slack, kakao, wechat bot api survey</li>
+                            <li>LINE WORKS 봇 초대, 사용 시나리오 구상 및 설계</li>
+                            <li>Dev code 작성 및 샘플 봇 구현</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="global_uuid" tabindex="-1" role="dialog" aria-labelledby="GlobalUuidModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="GlobalUuidModalLabel">모든 IDC 에서 global 한 값을 발급하는 데몬 구축/운영</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <ul>
+                        <li>IDC 간 장애 전파 방지를 위한 chunk 단위 관리 설계 및 구현 (2018.06 ~ 2018.08)</li>
+                        <li>Unique channel no 발급을 위한 데몬 구축 (2017.01 ~ 2017.04)</li>
+                    </ul>
                 </div>
             </div>
             <div class="modal-footer">
